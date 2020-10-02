@@ -19,6 +19,10 @@ jobs:
         run: |
           npm install
           npm run build
+      - uses: actions/artifact-upload@master
+        with:
+          name: artifact upload
+          path: public/
 
   test: 
     runs-on: ubuntu-latest
